@@ -36,7 +36,7 @@ const MyProfile = () => {
   //this is the function that fetches the profile details of the user
   const profileData = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/ahmed141"
+      "https://linkdln-clone.herokuapp.com/profile/LemuelDouglas125"
     );
 
     let profileData = await response.json();
@@ -49,7 +49,7 @@ const MyProfile = () => {
   const editData = async (e) => {
     e.preventDefault();
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/62a055ba8d11baa796c213aa",
+      "https://linkdln-clone.herokuapp.com/profile/62a4a4fd6855f8282c73abf4",
       {
         method: "PUT",
         body: JSON.stringify(profileFormData),
@@ -75,7 +75,7 @@ const MyProfile = () => {
     data.append("image", showImage);
     try {
       let response = await fetch(
-        "https://backend-linkedin-buildweek.herokuapp.com/profile/62a055ba8d11baa796c213aa/profileImage",
+        "https://linkdln-clone.herokuapp.com/profile/62a4a4fd6855f8282c73abf4/profileImage",
         {
           method: "POST",
           body: data,

@@ -33,8 +33,7 @@ const DetailsExperience = () => {
   // this is the function that fetches user experience
   const fetchExperience = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/experience/" +
-        params.username
+      "https://linkdln-clone.herokuapp.com/experience/" + params.username
       /*  {
         headers: {
           Authorization:
@@ -51,8 +50,7 @@ const DetailsExperience = () => {
     e.preventDefault();
     try {
       let response = await fetch(
-        "https://backend-linkedin-buildweek.herokuapp.com/experiences/" +
-          params.username,
+        "https://linkdln-clone.herokuapp.com/experiences/" + params.username,
 
         {
           method: "POST",
@@ -93,9 +91,7 @@ const DetailsExperience = () => {
 
   const downloadPdf = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/" +
-        params.id +
-        "/cv"
+      "https://linkdln-clone.herokuapp.com/profile/" + params.id + "/cv"
     );
     console.log("responseData", response);
     // open the response.url in a new tab
@@ -104,9 +100,7 @@ const DetailsExperience = () => {
 
   const downloadCSV = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/" +
-        params.username +
-        "/csv"
+      "https://linkdln-clone.herokuapp.com/profile/" + params.username + "/csv"
     );
 
     console.log("responseData", response);

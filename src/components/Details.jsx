@@ -24,8 +24,7 @@ const Details = () => {
 
   const profileData = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/" +
-        params.username
+      "https://linkdln-clone.herokuapp.com/profile/" + params.username
     );
     let profileData = await response.json();
 

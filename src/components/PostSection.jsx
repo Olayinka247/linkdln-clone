@@ -45,7 +45,7 @@ const PostSection = ({ post }) => {
 
   const profileData = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/ahmed141"
+      "https://linkdln-clone.herokuapp.com/profile/LemuelDouglas125"
     );
 
     let profileData = await response.json();
@@ -57,7 +57,7 @@ const PostSection = ({ post }) => {
   const fetchEditPost = async (e) => {
     e.preventDefault();
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/posts/" + post._id,
+      "https://linkdln-clone.herokuapp.com/posts/" + post._id,
       {
         method: "PUT",
         body: JSON.stringify(editPost),
@@ -77,9 +77,7 @@ const PostSection = ({ post }) => {
     const dataImage = new FormData();
     dataImage.append("image", showPostImage);
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/posts/" +
-        post._id +
-        "/image",
+      "https://linkdln-clone.herokuapp.com/posts/" + post._id + "/image",
       {
         method: "POST",
         body: dataImage,
@@ -94,7 +92,7 @@ const PostSection = ({ post }) => {
   const deletePost = async () => {
     try {
       let response = await fetch(
-        "https://backend-linkedin-buildweek.herokuapp.com/posts/" + post._id,
+        "https://linkdln-clone.herokuapp.com/posts/" + post._id,
         {
           method: "DELETE",
           body: JSON.stringify(editPost),

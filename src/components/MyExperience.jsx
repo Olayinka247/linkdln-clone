@@ -32,7 +32,7 @@ const MyExperience = () => {
   // this is the function that fetches user experience
   const fetchExperience = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/ahmed141/experiences"
+      "https://linkdln-clone.herokuapp.com/profile/LemuelDouglas125/experiences"
       /*  {
         headers: {
           Authorization:
@@ -49,7 +49,7 @@ const MyExperience = () => {
     e.preventDefault();
     try {
       let response = await fetch(
-        "https://backend-linkedin-buildweek.herokuapp.com/profile/ahmed141/experiences",
+        "https://linkdln-clone.herokuapp.com/profile/LemuelDouglas125/experiences",
         {
           method: "POST",
           body: JSON.stringify(addExperience),
@@ -98,7 +98,7 @@ const MyExperience = () => {
 
   const downloadPdf = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/62a055ba8d11baa796c213aa/cv"
+      "https://linkdln-clone.herokuapp.com/profile/62a4a4fd6855f8282c73abf4/cv"
     );
 
     console.log("responseData", response);
@@ -108,7 +108,7 @@ const MyExperience = () => {
 
   const downloadCSV = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/ahmed141/csv"
+      "https://linkdln-clone.herokuapp.com/profile/LemuelDouglas125/experiences/csv"
     );
 
     console.log("responseData", response);

@@ -34,9 +34,7 @@ const MySideBar = () => {
   }, []);
 
   const fetchData = async () => {
-    let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/"
-    );
+    let response = await fetch("https://linkdln-clone.herokuapp.com/profile");
     let responseData = await response.json();
     console.log(responseData);
     setProfiles(responseData);

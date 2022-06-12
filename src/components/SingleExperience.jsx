@@ -28,8 +28,7 @@ const SingleExperience = ({ experience }) => {
     e.preventDefault();
     try {
       let response = await fetch(
-        "https://backend-linkedin-buildweek.herokuapp.com/experience/" +
-          experience._id,
+        "https://linkdln-clone.herokuapp.com/experience/" + experience._id,
         {
           method: "PUT",
           body: JSON.stringify(formData),
@@ -58,7 +57,7 @@ const SingleExperience = ({ experience }) => {
     dataExp.append("image", showExpImage);
     try {
       let response = await fetch(
-        "https://backend-linkedin-buildweek.herokuapp.com/profile/" +
+        "https://linkdln-clone.herokuapp.com/profile/" +
           experience._id +
           "/image",
         {
@@ -82,7 +81,7 @@ const SingleExperience = ({ experience }) => {
   const handleDelete = async () => {
     try {
       let response = await fetch(
-        "https://backend-linkedin-buildweek.herokuapp.com/profile/ahmed141/experiences/" +
+        "https://linkdln-clone.herokuapp.com/profile/LemuelDouglas125/experiences/" +
           experience._id,
         {
           method: "DELETE",

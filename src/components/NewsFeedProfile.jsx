@@ -13,7 +13,7 @@ const NewsFeedProfile = () => {
   }, []);
   const profileData = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/ahmed141",
+      "https://linkdln-clone.herokuapp.com/profile/LemuelDouglas125",
       {
         // headers: {
         //   Authorization:

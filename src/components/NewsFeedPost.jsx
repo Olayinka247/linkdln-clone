@@ -26,7 +26,7 @@ const NewsFeedPost = () => {
 
   const profileData = async () => {
     let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/profile/ahmed141"
+      "https://linkdln-clone.herokuapp.com/profile/LemuelDouglas125"
     );
 
     let profileData = await response.json();
@@ -36,9 +36,7 @@ const NewsFeedPost = () => {
   };
 
   const getPost = async () => {
-    let response = await fetch(
-      "https://backend-linkedin-buildweek.herokuapp.com/posts"
-    );
+    let response = await fetch("https://linkdln-clone.herokuapp.com/posts");
     let postData = await response.json();
     // console.log(postData)
     setPosts(postData);
@@ -49,16 +47,13 @@ const NewsFeedPost = () => {
     e.preventDefault();
 
     try {
-      let response = await fetch(
-        "https://backend-linkedin-buildweek.herokuapp.com/posts",
-        {
-          method: "POST",
-          body: JSON.stringify(sendPost),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      let response = await fetch("https://linkdln-clone.herokuapp.com/posts", {
+        method: "POST",
+        body: JSON.stringify(sendPost),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       if (response.ok) {
         window.location.reload();
         let postData = await response.json();
